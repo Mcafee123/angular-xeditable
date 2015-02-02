@@ -128,7 +128,7 @@ module.exports = function(grunt) {
     fs: require('fs'),
     md: marked,
     version: '<%= pkg.version %>',
-    size: Math.floor(fs.statSync('dist/js/xeditable.min.js').size / 1024),
+    size: grunt.file.exists('dist/js/xeditable.min.js') ?  Math.floor(fs.statSync('dist/js/xeditable.min.js').size / 1024) : 0,
     structure: require('./docs/js/structure.js'),
     jsdoc: '<%= jsdocdata %>'
   };
@@ -202,7 +202,6 @@ module.exports = function(grunt) {
       grunt.config.set('jsdocdata', require('./jsdoc.json'));
     }
   });  
-  
 
   //metatasks
   
