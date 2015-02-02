@@ -205,6 +205,18 @@ module.exports = function(grunt) {
   
 
   //metatasks
+  
+  //inserted ma
+  grunt.registerTask('default', [
+    'jshint',
+    'clean',
+    'cssmin',
+    'concat',
+    'uglify',
+    'copy',
+    'compress'
+  ]);
+  
   grunt.registerTask('build', [
     'jshint',
     'clean',
