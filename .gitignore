@@ -2,6 +2,5 @@
 /playground
 dev.html
 jsdoc.json
-dist/*/xeditable.*
 starter/angular-xeditable/**
 zip/angular-xeditable**
